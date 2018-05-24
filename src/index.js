@@ -26,10 +26,10 @@ function render(fragment) {
 
 async function mainPage() {
     const fragment = document.importNode(templates.main, true);
-    // loginButtonEl = fragment.querySelector('.main__login-btn');
-    // loginButtonEl.addEventListener('click', e => {
-    //     loginPage();
-    // })
+    loginButtonEl = fragment.querySelector('.main__login-btn');
+    loginButtonEl.addEventListener('click', e => {
+        loginPage();
+    })
 
     render(fragment);
 }
