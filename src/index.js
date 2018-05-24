@@ -27,9 +27,21 @@ function render(fragment) {
 async function mainPage() {
     const fragment = document.importNode(templates.main, true);
     const loginButtonEl = fragment.querySelector('.main__login-btn');
+    const logoutEl = fragment.querySelector('.main__logout-btn');
     loginButtonEl.addEventListener('click', e => {
         loginPage();
     })
+    logoutEl.addEventListener('click', e => {
+        mainPage();
+    })
+    if (localStorage.getItem('token')) {
+        const todoContentFragment = document.importNode(templates.todoContent, true)
+        const todosRes = await postAPI.get('/todos');
+        todosRes.data.forEach(todo => {
+            const bodyEl = todoContentFragment.querySelector('.todo-content__body');
+            bodyEl.textContent = todo.body;
+        })
+    }
 
     render(fragment);
 }
