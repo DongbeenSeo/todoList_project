@@ -42,11 +42,11 @@ async function loginPage() {
     formEl.addEventListener('submit', async e => {
         const payload = {
             username: e.target.elements.username.value,
-            password: e.target.elemnets.password.value
+            password: e.target.elements.password.value
         };
         e.preventDefault();
-        const res = await postAPI.post('/users/login', payload);
-        login(res.date.token);
+        const res = await postAPI.post('/users/login', payload)
+        login(res.data.token);
         mainPage();
     })
     backButtonEl.addEventListener('click', e => {
