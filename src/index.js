@@ -14,9 +14,9 @@ function login(token) {
 }
 
 const templates = {
-    main = document.querySelector('#main').content,
-    login = document.querySelector('#login').content,
-    todoContent = document.querySelector('#todo-content').content
+    main: document.querySelector('#main').content,
+    login: document.querySelector('#login').content,
+    todoContent: document.querySelector('#todo-content').content
 };
 
 function render(fragment) {
