@@ -5,6 +5,7 @@ body {
 
 .main {
     &__login-btn {
+        display: inline-block;
         .root--authed & {
             display: none;
         }
