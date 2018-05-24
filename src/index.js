@@ -32,6 +32,7 @@ async function mainPage() {
         loginPage();
     })
     logoutEl.addEventListener('click', e => {
+        logout();
         mainPage();
     })
     if (localStorage.getItem('token')) {
