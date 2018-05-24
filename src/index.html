@@ -1,14 +1,45 @@
+K
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>중간 프로젝트 템플릿</title>
-  <link rel="stylesheet" href="./index.scss">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>중간 프로젝트 템플릿</title>
+    <link rel="stylesheet" href="./index.scss">
 </head>
+
 <body>
-  <h1>중간 프로젝트 템플릿</h1>
-  <script src="./index.js"></script>
+    <div class="root"></div>
+    <template id="main">
+      <h1 class="main__header">TODO List</h1>
+      <button class="main__login-btn">로그인</button>
+      <button class="main__logout-btn">로그아웃</button>
+      <!-- <button class="main__new-todo-btn"></button> -->
+    </template>
+
+    <template id="login">
+        <div class="login">
+          <h1 class="login__title">로그인</h1>
+          <form class="login__form">
+            <input name="username" type="text" class="login__username">
+            <input name="password" type="password" class="login__password">
+            <button type="submit">전송</button>
+            <button class="login__back-btn">뒤로</button>
+          </form>
+        </div>
+      </template>
+
+    </template>
+    <template id="todo-content">
+      <div class="todo-content">
+        <p class="todo-content__body"></p>
+      </div>
+    </template>
+
+
+    <script src="./index.js"></script>
 </body>
+
 </html>
