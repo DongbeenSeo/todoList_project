@@ -13,6 +13,12 @@ function login(token) {
     rootEl.classList.add('root--authed');
 }
 
+function logout() {
+    localStorage.removeItem('token');
+    delete postAPI.defaults.headers['Authorization'];
+    rootEl.classList.remove('root--authed');
+}
+
 const templates = {
     main: document.querySelector('#main').content,
     login: document.querySelector('#login').content,
